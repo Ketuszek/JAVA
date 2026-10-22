@@ -1,0 +1,22 @@
+ <html>
+ <body>
+ <div style="color:green;font-size:50px;">
+ <script language="JavaScript">
+// Jakub Metuszek 3F
+// Zadanie 11
+ var D1_anki=prompt("Data1=","");
+ var D2_anki=prompt("Data2=","");
+ var sekund;
+ var a=parseFloat(D1_anki);
+ var b=parseFloat(D2_anki);
+ sekund=(a-b)*24*60*60;
+ document.write("Ilość sekund między dniami "+a+" i "+b+" = "+sekund+"<br>");
+ function okno_zamknij_anki()
+ {
+ window.close()
+ }
+ </script>
+ </div>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_anki()"/>
+ </body>
+ </html>
