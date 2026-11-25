@@ -1,0 +1,62 @@
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Metuszek - Zadanie 21</title>
+
+    <script language="JavaScript">
+
+        function V_met(r,h)
+        {
+            let r_liczba = parseFloat(r);
+            let h_liczba = parseFloat(h);
+
+            let V_wynik = Math.PI*r_liczba*r_liczba*h_liczba;
+
+            document.getElementsByName('obj')[0].value=V_wynik.toFixed(2);
+            document.getElementById("pokaz1").innerHTML="V = "+V_wynik.toFixed(2)+" cm^3";
+        }
+
+        function Pc_met(r,h)
+        {
+            let r_liczba = parseFloat(r);
+            let h_liczba = parseFloat(h);
+
+            let Pc_wynik = 2*Math.PI*r_liczba*r_liczba+2*Math.PI*r_liczba*h_liczba;
+
+            document.getElementsByName('pole')[0].value=Pc_wynik.toFixed(2);
+            document.getElementById("pokaz2").innerHTML="Pc = "+Pc_wynik.toFixed(2)+" cm^2";
+        }
+
+    </script>
+</head>
+<body>
+
+<h1>Obliczanie V i Pc walca</h1>
+
+<form name="formularz" onsubmit="V_met(this.promien.value,this.wysokosc.value); Pc_met(this.promien.value,this.wysokosc.value); return false;">
+
+    Podaj promień r =
+    <input size="6" name="promien">
+
+    Podaj wysokość h =
+    <input size="6" name="wysokosc">
+
+    <br><br>
+
+    <input type="submit" value="Oblicz">
+
+    <br><br>
+
+    V =
+    <input size="10" name="obj">
+
+    Pc =
+    <input size="10" name="pole">
+
+</form>
+
+<div id="pokaz1"></div>
+<div id="pokaz2"></div>
+
+</body>
+</html>
