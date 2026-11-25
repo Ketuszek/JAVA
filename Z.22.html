@@ -1,0 +1,54 @@
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Metuszek - Zadanie 22</title>
+</head>
+<body>
+
+<script language="JavaScript">
+
+    function Pole_met(a_met,b_met)
+    {
+        return a_met*b_met;
+    }
+
+    function obwod_met(a_met,b_met)
+    {
+        return 2*a_met+2*b_met;
+    }
+
+    function oblicz_met()
+    {
+        let a_met = parseFloat(document.getElementById("a_dana_met").value);
+        let b_met = parseFloat(document.getElementById("b_dana_met").value);
+
+        document.getElementById("wyprowadz_pole_met").innerHTML =
+        "Pole prostokąta = "+Pole_met(a_met,b_met).toFixed(2);
+
+        document.getElementById("wyprowadz_obwod_met").innerHTML =
+        "Obwód prostokąta = "+obwod_met(a_met,b_met).toFixed(2);
+    }
+
+</script>
+
+<h1>Wszystko o PROSTOKĄCIE</h1>
+
+Podaj bok a:
+<input type="text" id="a_dana_met">
+<br><br>
+
+Podaj bok b:
+<input type="text" id="b_dana_met">
+<br><br>
+
+<input type="button" value="Oblicz" onclick="oblicz_met()">
+
+<br><br>
+
+<div style="color:red;font-size:30px;">
+    <div id="wyprowadz_pole_met"></div>
+    <div id="wyprowadz_obwod_met"></div>
+</div>
+
+</body>
+</html>
