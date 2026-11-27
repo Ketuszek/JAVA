@@ -1,0 +1,49 @@
+<textarea>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Metuszek - Zadanie 18</title>
+</head>
+<body>
+    <div style="color:navy;font-size:30px;">
+        <script language="JavaScript">
+            let a = parseFloat(prompt("Podaj liczbę a="));
+            let b = parseFloat(prompt("Podaj liczbę b="));
+
+            function odejmowanie_met(a,b)
+            {
+                return a-b;
+            }
+
+            function mnozenie_met(a,b)
+            {
+                return a*b;
+            }
+
+            function od_kwadratu_met(a,b)
+            {
+                document.write(a+"^2 = "+Math.pow(a,2)+"<br>");
+                document.write(b+"^2 = "+Math.pow(b,2)+"<br>");
+            }
+
+            function reszta_z_dzielenia_a_przez_b_met(a,b)
+            {
+                return a%b;
+            }
+
+            document.write("Odejmowanie = "+odejmowanie_met(a,b)+"<br>");
+            document.write("Mnożenie = "+mnozenie_met(a,b)+"<br>");
+            od_kwadratu_met(a,b);
+            if(b!=0)
+            {
+                document.write("Reszta z dzielenia = "+reszta_z_dzielenia_a_przez_b_met(a,b));
+            }
+            else
+            {
+                document.write("Nie można dzielić przez zero");
+            }
+        </script>
+    </div>
+</body>
+</html>
+</textarea>
