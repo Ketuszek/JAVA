@@ -1,0 +1,50 @@
+<textarea>
+  <html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Metuszek - Zadanie 20</title>
+</head>
+<body>
+<script language="JavaScript">
+
+    function AB_met()
+    {
+        let wynik = Math.sqrt(Math.pow(xb_met-xa_met,2)+Math.pow(yb_met-ya_met,2));
+        return wynik;
+    }
+
+    function BC_met()
+    {
+        let wynik = Math.sqrt(Math.pow(xc_met-xb_met,2)+Math.pow(yc_met-yb_met,2));
+        return wynik;
+    }
+
+    function AC_met()
+    {
+        let wynik = Math.sqrt(Math.pow(xc_met-xa_met,2)+Math.pow(yc_met-ya_met,2));
+        return wynik;
+    }
+
+    let xa_met = parseFloat(prompt("Podaj xa punktu A="));
+    let ya_met = parseFloat(prompt("Podaj ya punktu A="));
+
+    let xb_met = parseFloat(prompt("Podaj xb punktu B="));
+    let yb_met = parseFloat(prompt("Podaj yb punktu B="));
+
+    let xc_met = parseFloat(prompt("Podaj xc punktu C="));
+    let yc_met = parseFloat(prompt("Podaj yc punktu C="));
+
+    document.write("<div style='color:navy;font-size:30px;'>");
+    document.write("Punkt A = ("+xa_met+","+ya_met+")<br>");
+    document.write("Punkt B = ("+xb_met+","+yb_met+")<br>");
+    document.write("Punkt C = ("+xc_met+","+yc_met+")<br><br>");
+
+    document.write("Długość AB = "+AB_met().toFixed(2)+"<br>");
+    document.write("Długość BC = "+BC_met().toFixed(2)+"<br>");
+    document.write("Długość AC = "+AC_met().toFixed(2));
+    document.write("</div>");
+
+</script>
+</body>
+</html>
+</textarea>
