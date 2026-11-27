@@ -1,0 +1,63 @@
+<textarea>
+  <html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Metuszek - Zadanie 23</title>
+
+    <script language="JavaScript">
+
+        function dlugosc_met(D_met,X_met)
+        {
+            let wynik = Math.sqrt(Math.pow(D_met,2)+Math.pow(X_met,2));
+            return wynik;
+        }
+
+        function kat_met(D_met,X_met)
+        {
+            let wynik = Math.atan(D_met/X_met);
+            wynik = wynik*180/Math.PI;
+            return wynik;
+        }
+
+        function oblicz_met()
+        {
+            let D_met = parseFloat(document.getElementById("wysokosc").value);
+            let X_met = parseFloat(document.getElementById("odleglosc").value);
+
+            let wynik1 = dlugosc_met(D_met,X_met);
+            let wynik2 = kat_met(D_met,X_met);
+
+            document.getElementById("dlugosc_wynik").value = wynik1.toFixed(2)+" m";
+            document.getElementById("kat_wynik").value = wynik2.toFixed(2)+" stopni";
+        }
+
+    </script>
+</head>
+<body>
+
+<h1>Drabina oparta o mur</h1>
+
+Podaj wysokość oparcia drabiny D:
+<input type="text" id="wysokosc">
+m
+<br><br>
+
+Podaj odległość drabiny od muru X:
+<input type="text" id="odleglosc">
+m
+<br><br>
+
+<input type="button" value="Oblicz" onclick="oblicz_met()">
+
+<br><br>
+
+Długość drabiny:
+<input type="text" id="dlugosc_wynik">
+<br><br>
+
+Kąt nachylenia drabiny:
+<input type="text" id="kat_wynik">
+
+</body>
+</html>
+</textarea>
