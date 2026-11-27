@@ -1,0 +1,38 @@
+<textarea>
+  <html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>Metuszek - Zadanie 19</title>
+</head>
+<body>
+<script language="JavaScript">
+    function Pole_met()
+    {
+        let a_met = parseFloat(document.getElementById('dlugosc').value);
+        let b_met = a_met*a_met;
+        document.getElementById("nazwa").innerHTML = "Pole kwadratu = "+b_met.toFixed(2)+" cm^2";
+    }
+
+    function obwod_met()
+    {
+        let a_met = parseFloat(document.getElementById('dlugosc').value);
+        let b_met = 4*a_met;
+        document.getElementById("nazwa").innerHTML = "Obwód kwadratu = "+b_met.toFixed(2)+" cm";
+    }
+</script>
+
+<h1>Wszystko o KWADRACIE</h1>
+Podaj długość boku:
+<input type="text" id="dlugosc"> cm
+<br><br>
+
+<input type="button" value="Oblicz pole" onclick="Pole_met()">
+<br><br>
+
+<input type="button" value="Oblicz obwód" onclick="obwod_met()">
+<br><br>
+
+<div style="color:red;font-size:40px;" id="nazwa"></div>
+</body>
+</html>
+</textarea>
